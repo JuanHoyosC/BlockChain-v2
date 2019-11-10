@@ -1,0 +1,45 @@
+<div class="containter" *ngIf = "fraude">
+    <div class="alert alert-danger text-center" role="alert">
+        Hubo un intento de fraude!
+      </div>
+</div>
+<app-info-pagina></app-info-pagina>
+<div class=" container  alert alert-dark my-5">
+    <h2>BlockChain</h2>
+    Cada carta representa un bloque en la cadena. Click en el bloque para poder ver la información
+</div>
+
+<div class="container my-2" style="overflow-x: scroll;white-space: nowrap;">
+
+    <span class="card my-2 mx-2"  style="width:18rem;" *ngFor="let bloque of bloques" (click)="mostrar(bloque.$key)">
+        <ul class="list-group">
+            <li class="list-group-item">Block: {{bloque.index}} </li>
+            <li class="list-group-item" style="color:rgb(16, 127, 201);"><p>Hash: {{bloque.hash}}...</p></li>
+            <li class="list-group-item" style="color:rgb(231, 80, 80);">Hash anterior: {{bloque.hashAnterior}}...</li>
+            <li class="list-group-item">TimeStamp: {{bloque.timeStamp}}...</li>
+        </ul>
+    </span>
+
+</div>
+
+<div class="container table my-5" style="width:100%;">
+    <h2 class="my-3">Información del bloque</h2>
+    <table class="table my-2">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Index</th>
+                <th scope="col">Hash</th>
+                <th scope="col">HashAnterior</th>
+                <th scope="col">Fecha</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">{{index}}</th>
+                <td>{{hash}}...</td>
+                <td>{{hashAnterior}}...</td>
+                <td>{{timeStamp}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

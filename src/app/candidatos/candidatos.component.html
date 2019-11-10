@@ -1,0 +1,49 @@
+
+<div class="containter" *ngIf = "fraude">
+    <div class="alert alert-danger text-center" role="alert">
+        Hubo un intento de fraude!
+      </div>
+</div>
+
+<div class="container my-5" stryle = "width:15rem">
+    <h5 class = "my-3 mx-3">Ingrese sus datos personales</h5>
+    <form #votantesForm="ngForm" class = "mx-3">
+        <input type="text" placeholder = "Nombre" class="form-control my-2" name="nombre" #nombre="ngModel" [(ngModel)]="votantesService.selectVotante.nombre">
+        <input type="text" placeholder = "Apellido" class="form-control my-2" name="apellido" #nombre="ngModel" [(ngModel)]="votantesService.selectVotante.apellido">
+        <input type="text" Placeholder = "Número de identificación" class="form-control my-2" name="identificador" #nombre="ngModel" [(ngModel)]="votantesService.selectVotante.identificador">
+    </form>
+</div>
+
+<div class="container my-5">
+    <div class="card mx-4 my-3" style="width: 18rem; display:inline-flex;">
+        <img src="https://i.ibb.co/WpTJS9K/homero-durmiendo.jpg"
+            class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Clases más tarde</h5>
+            <p class="card-text">Some quick example text to build on the card title
+                card's content.</p>
+            <button type="button" class="btn btn-secondary" (click) = "onSubtmit(votantesForm,1)" *ngIf = "mostrar">Votar</button>
+        </div>
+    </div>
+
+    <div class="card mx-4 my-3" style="width: 18rem; display:inline-flex;">
+        <img src="https://i.ibb.co/R7dMVpj/mundo-ideal.jpg"
+            class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Examenes sin respuestas multiples</h5>
+            <p class="card-text">Some quick example text</p>
+            <button type="button" class="btn btn-secondary" (click) = "onSubtmit(votantesForm,2)" *ngIf = "mostrar">Votar</button>
+        </div>
+    </div>
+
+    <div class="card mx-4" style="width: 18rem; display:inline-flex;">
+        <img src="https://i.ibb.co/pv9N18V/felicidad.jpg"
+            class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Sin quices sorpresas</h5>
+            <p class="card-text">Some quick example text to build on the card title
+                card's content.</p>
+            <button type="button" class="btn btn-secondary" (click) = "onSubtmit(votantesForm,3)" *ngIf = "mostrar">Votar</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+.card{
+    display: inline-flex;
+    border:1px solid rgba(0, 0, 0, 0.253);
+    cursor: pointer;
+}
+
+
+
+.card:hover{
+    border:1px solid rgb(80, 160, 207);
+}
+
+.card:active{
+    border:1px solid rgba(0, 0, 0, 0.096);
+    -webkit-box-shadow: 1px -1px 5px 0px rgba(0,0,0,0.4);
+    -moz-box-shadow: 1px -1px 5px 0px rgba(0,0,0,0.4);
+    box-shadow: 1px -1px 5px 0px rgba(0,0,0,0.4);
+}
+
+.table{
+    overflow-x:auto;
+}

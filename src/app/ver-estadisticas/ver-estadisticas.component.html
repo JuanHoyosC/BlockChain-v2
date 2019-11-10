@@ -1,0 +1,45 @@
+<div class="containter" *ngIf="fraude">
+    <div class="alert alert-danger text-center" role="alert">
+        Hubo un intento de fraude!
+    </div>
+</div>
+
+<div class="container my-5">
+
+    <div class="card mx-4 my-3" style="width: 18rem; display:inline-flex;">
+        <img src="https://i.ibb.co/WpTJS9K/homero-durmiendo.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Clases más tarde</h5>
+            <p class="card-text">Some quick example text to build on the card title
+                card's content.</p>
+            <button type="button" class="btn btn-info">
+                Cantidad de votos <span class="badge badge-light">{{candidato1}} </span>
+            </button>
+        </div>
+    </div>
+
+    <div class="card mx-4 my-3" style="width: 18rem; display:inline-flex;">
+        <img src="https://i.ibb.co/R7dMVpj/mundo-ideal.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Examenes sin respuestas multiples</h5>
+            <p class="card-text">Some quick example text</p>
+            <button type="button" class="btn btn-info">
+                Cantidad de votos <span class="badge badge-light">{{candidato2}} </span>
+            </button>
+
+        </div>
+    </div>
+
+    <div class="card mx-4" style="width: 18rem; display:inline-flex;">
+        <img src="https://i.ibb.co/pv9N18V/felicidad.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Sin quices sorpresas</h5>
+            <p class="card-text">Some quick example text to build on the card title
+                card's content.</p>
+            <button type="button" class="btn btn-info">
+                Cantidad de votos <span class="badge badge-light">{{candidato3}} </span>
+            </button>
+        </div>
+    </div>
+
+</div>
